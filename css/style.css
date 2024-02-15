@@ -1,0 +1,19 @@
+/* *{
+    margin: 0;
+    padding: 0;
+}
+.red{
+    background: rgb(216, 24, 226);
+    color:white;
+    height: 80px;
+}
+.green{
+    background-color: green;
+    color: black;
+} */
+.Table{
+    background-color: aqua;
+    height: 50%;
+    width: 80%;
+    border: 2px dotted red;
+}

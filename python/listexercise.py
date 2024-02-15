@@ -1,0 +1,12 @@
+a=[1,2,3,4]
+a[3]=8
+print(a)
+print(len(a))
+b=[]
+b.append(16)
+b.append(17)
+print(b)
+c=[95,89,9,105,87]
+n=0
+print(sorted(c))
+print(sum(c))
