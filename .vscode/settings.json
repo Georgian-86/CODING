@@ -1,6 +1,7 @@
 {
     "C_Cpp.errorSquiggles": "disabled",
     "files.associations": {
-        "RECURSION.C": "cpp"
+        "RECURSION.C": "cpp",
+        "stdio.h": "c"
     }
 }
