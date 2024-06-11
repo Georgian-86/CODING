@@ -1,5 +1,4 @@
-try:
-#     file= open('C:/Users/golu kumar/Documents/example_wr.txt','r') 
-#     print(file.read())
-# except:
-#     print("File not found")
+def print_pascals_triangle(triangle):
+#     max_width = len(" ".join(map(str, triangle[-1])))
+#     for row in triangle:
+#         print(" ".join(map(str, row)).center(max_width))
