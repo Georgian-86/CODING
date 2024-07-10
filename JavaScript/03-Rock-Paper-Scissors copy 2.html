@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <h1>Rock Paper Scissors</h1>
+    <button
+      onclick="
+        playGame('Rock');
+    ">
+      Rock
+    </button>
+
+    <button
+      onclick="
+       playGame('Paper');
+    "
+    >
+      Paper
+    </button>
+
+    <button
+      onclick="
+        playGame('Scissors');
+    "
+    >
+      Scissors
+    </button>
+
+    <button onclick="
+    Score.wins = 0;
+    Score.losses = 0;
+    Score.ties = 0;
+    alert('Score reset to 0')
+    ">Reset Score</button>
+  </body>
+  <script>
+
+    const Score = {
+      wins : 0,
+      losses :0,
+      ties : 0
+    };
+
+    function pickComputerMove()
+    {
+        const randomNumber = Math.random();
+        let computerMove = '';
+
+        if (randomNumber < 0.33) {
+        computerMove = 'rock';}
+        else if (randomNumber < 0.66) {
+        computerMove = 'paper';}
+        else {
+        computerMove = 'scissors';}
+
+        return computerMove;
+    }
+
+    function playGame(playerMove)
+    {
+        const computerMove = pickComputerMove();
+        let result = '';
+
+        if (playerMove === 'Rock'){
+            if (computerMove === 'rock'){
+                result = 'it is a tie!'}
+                else if (computerMove === 'paper') {
+                result = 'you lose!'}
+                else {
+                result = 'You win!'}
+        }
+
+        else if (playerMove === 'Paper') {
+            if (computerMove === 'paper'){
+                result = 'it is a tie!'}
+                else if (computerMove === 'scissors') {
+                result = 'you lose!'}
+                else {
+                result = 'You win!'}
+        }
+        else if(playerMove === 'Scissors') {
+            if (computerMove === 'scissors'){
+                result = 'it is a tie!'}
+                else if (computerMove === 'rock') {
+                result = 'you lose!'}
+                else {
+                result = 'You win!'}
+        }
+
+        if (result === 'You win!'){
+          Score.wins ++ ;
+        }
+        else if (result === 'you lose!'){
+          Score.losses ++ ;
+        }
+        else if(result === 'it is a tie'){
+          Score.ties ++ ;
+        }
+
+        alert(`You chose ${playerMove}. Computer chose ${computerMove}. \n ${result} \nWins: ${Score.wins} Losses: ${Score.losses} Ties: ${Score.ties}`);
+    }
+  </script>
+</html>

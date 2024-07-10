@@ -1,5 +1,6 @@
 #include <stdio.h>
-void reference(int[],int); void value(int);
+void reference(int x[],int size); 
+void value(int);
 int main()
 {
     int arr[]={1,2,3,4,5};
