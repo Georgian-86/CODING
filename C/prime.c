@@ -5,17 +5,13 @@ int main()
     for (i=21; i<=40; i++)
     {
         c=0;
-        for (j=2;j<=i;j++)
+        for (j=2;j*j<=i;j++)
         {
             if(i%j==0){
             c++;
-                if (c==2){
-                    r++;
-                }
             }
 
         }
-    printf("%d",r);
     
     if (c==2){
         printf("%d is a prime number",i);
